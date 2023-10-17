@@ -31,7 +31,7 @@ public class ApplicationSubscriptionTypeService implements SubscriptionTypeServi
 
     @Override
     public SubscriptionType create(SubscriptionTypeDTO dto) {
-        if(Objects.nonNull(dto.getId())) {
+        if (Objects.nonNull(dto.getId())) {
             throw new BadRequestException("id deve ser nulo");
         }
         return subscriptionTypeRepository.save(SubscriptionType.builder()
@@ -55,7 +55,8 @@ public class ApplicationSubscriptionTypeService implements SubscriptionTypeServi
 
     @Override
     public void delete(Long id) {
-
+        getSubscriptionType(id);
+        subscriptionTypeRepository.deleteById(id);
     }
 
     private SubscriptionType getSubscriptionType(Long id) {
