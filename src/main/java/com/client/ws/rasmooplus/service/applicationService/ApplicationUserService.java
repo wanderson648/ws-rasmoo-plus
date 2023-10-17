@@ -11,6 +11,7 @@ import com.client.ws.rasmooplus.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -19,6 +20,12 @@ public class ApplicationUserService implements UserService {
 
     private final UserRepository userRepository;
     private final UserTypeRepository userTypeRepository;
+
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
 
     @Override
     public User create(UserDto dto) {

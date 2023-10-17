@@ -1,5 +1,6 @@
 package com.client.ws.rasmooplus.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,6 +39,7 @@ public class User implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_type_id")
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private UserType userType;
 
     @ManyToOne(fetch = FetchType.LAZY)
