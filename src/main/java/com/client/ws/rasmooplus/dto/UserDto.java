@@ -15,8 +15,8 @@ import org.hibernate.validator.constraints.br.CPF;
 import java.time.LocalDate;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class UserDto {
 
@@ -39,7 +39,7 @@ public class UserDto {
     private LocalDate dtExpiration = LocalDate.now();
 
     @NotNull
-    private Long usertypeId;
+    private Long userTypeId;
 
     private Long subscriptionTypeId;
 }

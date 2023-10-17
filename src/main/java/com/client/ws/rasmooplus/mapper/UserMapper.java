@@ -16,7 +16,7 @@ public class UserMapper {
                 .cpf(dto.getCpf())
                 .dtSubscription(dto.getDtSubscription())
                 .dtExpiration(dto.getDtExpiration())
-                .usertype(userType)
+                .userType(userType)
                 .subscriptionType(subscriptionType)
                 .build();
     }

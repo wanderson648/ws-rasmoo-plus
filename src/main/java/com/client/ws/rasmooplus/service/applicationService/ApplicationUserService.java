@@ -26,7 +26,7 @@ public class ApplicationUserService implements UserService {
             throw new BadRequestException("id deve ser nulo");
         }
 
-        var userTypeOpt = userTypeRepository.findById(dto.getUsertypeId());
+        var userTypeOpt = userTypeRepository.findById(dto.getUserTypeId());
 
         if (userTypeOpt.isEmpty()) {
             throw new BadRequestException("userTypeId não encontrado");
