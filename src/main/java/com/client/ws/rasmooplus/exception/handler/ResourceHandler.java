@@ -3,7 +3,6 @@ package com.client.ws.rasmooplus.exception.handler;
 import com.client.ws.rasmooplus.dto.error.ErrorResponseDto;
 import com.client.ws.rasmooplus.exception.BadRequestException;
 import com.client.ws.rasmooplus.exception.NotFoundException;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -26,5 +25,4 @@ public class ResourceHandler {
                 .httpStatus(HttpStatus.NOT_FOUND)
                 .statusCode(HttpStatus.NOT_FOUND.value()).build());
     }
-
 }
