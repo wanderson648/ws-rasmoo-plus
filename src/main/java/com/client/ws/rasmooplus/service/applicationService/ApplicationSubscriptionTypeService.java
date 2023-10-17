@@ -1,6 +1,6 @@
 package com.client.ws.rasmooplus.service.applicationService;
 
-import com.client.ws.rasmooplus.dto.SubscriptionTypeDTO;
+import com.client.ws.rasmooplus.dto.SubscriptionTypeDto;
 import com.client.ws.rasmooplus.exception.BadRequestException;
 import com.client.ws.rasmooplus.exception.NotFoundException;
 import com.client.ws.rasmooplus.model.SubscriptionType;
@@ -30,7 +30,7 @@ public class ApplicationSubscriptionTypeService implements SubscriptionTypeServi
     }
 
     @Override
-    public SubscriptionType create(SubscriptionTypeDTO dto) {
+    public SubscriptionType create(SubscriptionTypeDto dto) {
         if (Objects.nonNull(dto.getId())) {
             throw new BadRequestException("id deve ser nulo");
         }
@@ -43,7 +43,7 @@ public class ApplicationSubscriptionTypeService implements SubscriptionTypeServi
     }
 
     @Override
-    public SubscriptionType update(Long id, SubscriptionTypeDTO dto) {
+    public SubscriptionType update(Long id, SubscriptionTypeDto dto) {
         getSubscriptionType(id);
         return subscriptionTypeRepository.save(SubscriptionType.builder()
                 .id(id)

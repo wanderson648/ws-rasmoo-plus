@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SubscriptionTypeDTO {
+public class SubscriptionTypeDto {
     private Long id;
     private String name;
     private Long accessMonths;
